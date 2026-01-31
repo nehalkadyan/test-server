@@ -4,7 +4,10 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin : "https://test-client-git-main-nehal-kadyans-projects.vercel.app",
+    methods : ["GET"]
+}))
 app.use(express.json());
 
 app.get("/test", (req, res) => {
